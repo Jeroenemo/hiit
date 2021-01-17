@@ -41,3 +41,6 @@ def completed():
         return render_template("home.jinja2")
     return render_template("complete.jinja2", sets=session["set_counter"])
 
+if __name__ == ("__main__"):
+
+  print('\a')
