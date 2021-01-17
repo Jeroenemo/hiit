@@ -38,6 +38,3 @@ def exercise():
 def completed():
     return render_template("complete.jinja2", sets=session["set_counter"])
 
-if __name__ == '__main__':
-
-  app.run(threaded=True, port=5000)
