@@ -5,7 +5,12 @@
     <h2 class="heading">Exercise</h2>
 
     <span class="timer" id="timer">{{ exercise }}s</span>
-    <progress max="{{ exercise }}" value="{{ exercise }}" class="progress progress--set" id="progressBar"></progress>
+    <progress 
+        max="{{ exercise }}" 
+        value="{{ exercise }}" 
+        class="progress progress--set" 
+        id="progressBar"
+    ></progress>
 
     <script type="application/javascript">
         const timerElement = document.getElementById("timer");

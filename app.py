@@ -1,8 +1,9 @@
 
 from flask import Flask, render_template, redirect, url_for, session, request
+import os
 
 app = Flask(__name__)
-app.secret_key = "jose"
+app.secret_key = os.urandom(24)
 
 
 @app.route("/", methods=["GET", "POST"])
@@ -36,5 +37,6 @@ def exercise():
 
 @app.route("/complete")
 def completed():
+   
     return render_template("complete.jinja2", sets=session["set_counter"])
 
