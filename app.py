@@ -39,6 +39,7 @@ def exercise():
 @app.route("/complete", methods=["GET", "POST"])
 def completed():
     if request.method == "POST":
-        return render_template("home.jinja2")
+        return redirect("/")
+        # return render_template("home.jinja2")
     return render_template("complete.jinja2", sets=session["set_counter"])
 
